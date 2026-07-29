@@ -51,13 +51,8 @@ document.querySelector("#page1btn").classList.add("active");
 //qns for quiz. taken from practical 12 javascript
 
 //these are sounds going to be used for both quiz and minigame
-<<<<<<< HEAD
 const correctSound = new Audio("audio/correct.mp3");
 const wrongSound = new Audio("audio/wrong.mp3");
-=======
-const correctSound = new Audio("audio/correct.mp3")
-const wrongSound = new Audio("audio/wrong.mp3")
->>>>>>> b1435273fa4a99acc94830a80f4ad31083aad815
 
 correctSound.volume = 0.3;
 wrongSound.volume = 0.3;
