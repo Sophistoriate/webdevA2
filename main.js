@@ -54,6 +54,9 @@ document.querySelector("#page1btn").classList.add("active");
 const correctSound = new Audio("audio/correct.mp3")
 const wrongSound = new Audio("audio/wrong.mp3")
 
+correctSound.volume = 0.3;
+wrongSound.volume = 0.3;
+
 const qns = {
     "What is the safest way to prevent the spread of germs while preparing food?": {
         ans: "Wash your hands with soap and water",
@@ -150,6 +153,8 @@ let currentAnswer = "";
 
 GenerateQuestion();
 
+const submit_button = document.getElementById("submit-button");
+
 function GenerateQuestion() {
     const entries = Object.entries(qns);
     const random = entries[Math.floor(Math.random() * entries.length)];
@@ -177,7 +182,7 @@ function GenerateQuestion() {
     document.querySelector(".quiz-questions").innerHTML = html;
 }
 
-document.getElementById("submit-button").addEventListener("click", function () {
+submit_button.addEventListener("click", function () {
 
     const selected = document.querySelector('input[name="answer"]:checked');
     const result = document.getElementById("result");
@@ -202,10 +207,10 @@ document.getElementById("submit-button").addEventListener("click", function () {
         radio.disabled = true;
     });
 
-    this.disabled = true;
+    submit_button.disabled = true;
 
     setTimeout(function() {
-        this.disabled = false;
+        submit_button.disabled = false;
         result.textContent = "";
         GenerateQuestion();
     }, 1500);
