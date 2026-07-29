@@ -206,6 +206,8 @@ main{
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0,0,0,.1);
     margin: 2rem;
+
+    font-weight:650;
 }
 
 #page2 .foodsafety,
@@ -215,6 +217,16 @@ main{
     grid-template-columns: minmax(0,1fr) minmax(0,1fr);
     gap: 2rem;
     align-items: center;
+}
+
+
+#page2 .compare-grid ul{
+    display: grid;
+    grid-template-columns: minmax(0,1fr) minmax(0,1fr);
+    gap: 2rem;
+    align-items: center;
+
+    list-style-type: none;
 }
 
 #page2 .rules{
