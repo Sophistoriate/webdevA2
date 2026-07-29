@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 @font-face {
     font-family: "Cinzel";
     src: url("fonts/CinzelFont.ttf") format("truetype");
@@ -24,11 +23,17 @@ header{
     border-bottom: dotted #e8c872;
     justify-content: space-between;
 }
+
+header h1{
+    font-size: 1.3rem;
+}
+
 nav ul{
     list-style: none;
     display: flex;
     gap: 5rem;
-    padding: 0 10rem;
+    padding: 0 5%;
+    width: 100%;
 }
 
 nav ul li button{
@@ -38,7 +43,7 @@ nav ul li button{
     outline: none;
     cursor: pointer;
 
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     color: #443e34;
     padding: 10px 0;
     font-weight: 800;
@@ -78,6 +83,23 @@ main{
     font-size: 2rem;
 }
 
+/* base page*/
+.page{
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease;
+    width: 100%;
+    transform: translateY(20px);
+
+    color:#443e34;
+}
+
+.page.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
 /*intro page*/
 #page1{
     padding: 2rem 6rem;
@@ -88,8 +110,6 @@ main{
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
-
-    color:#443e34;
 }
 
 #page1 .intro{
@@ -109,11 +129,8 @@ main{
     grid-row: 2;
 
     display: grid;
-    grid-template-columns:
-        minmax(0,1fr)
-        minmax(0,1fr)
-        minmax(0,1fr);
-    gap: 2rem;
+    grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,1fr);
+    gap: 1rem   ;
 }
 
 #page1 .roles h2{
@@ -143,8 +160,20 @@ main{
     transition: all 1s ease;
 }
 
+#page1 .card img{
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    min-height: 150px;
+    object-fit: cover;
+    border-radius: 2rem;
+    border: #e8c872 solid;
+    background: #58635a;
+}
+
 #page1 .card h2,
 #page1 .card p{
+    color: #f7f1e4;
     overflow-wrap: break-word;
 }
 
@@ -153,242 +182,280 @@ main{
     box-shadow: 0 10px 25px rgba(201,157,42,.35);
 }
 
+/*page 2 food safety*/
+#page2{
+    padding: 2rem 6rem;
 
-footer{
-    border-top: dotted #e8c872;
+    overflow-wrap: break-word;
+    white-space: normal;
+
+    display: grid;
+    gap: 3rem;
 }
-header, footer{
-    background-color: #687465;
-    color: #ebe3d5;
-    display: flex;
+
+#page2 .intro,
+#page2 .foodsafety,
+#page2 .rules,
+#page2 .common-mistakes,
+#page2 .comparison,
+#page2 .quiz{
+    min-width: 0;
+
+    background-color: #f7f1e4;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,.1);
+    margin: 2rem;
+}
+
+#page2 .foodsafety,
+#page2 .common-mistakes,
+#page2 .compare-grid{
+    display: grid;
+    grid-template-columns: minmax(0,1fr) minmax(0,1fr);
+    gap: 2rem;
     align-items: center;
-    padding: 1rem 5rem;
 }
 
-.page{
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.5s ease;
-    width: 100%;
-    transform: translateY(20px);
+#page2 .rules{
+    text-align: center;
 }
 
-.page.active {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
+#page2 .rule-grid{
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    gap: 1rem;
 }
 
-.highlight{
-    color: #687465;
-    font-size: 1.2em;
+#page2 .rule-card{
+    background: #687465;
+    border: 3px solid #e8c872;
+    border-radius: 12px;
+    padding: 2rem;
+    color: #f7f1e4;
+    transition: all 1s ease;
 }
 
-/*tablet*/
-@media (max-width: 800px) {
-    header {
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-    }
-
-    nav ul {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-        padding: 0;
-
-    }
-
-    nav ul li button {
-        font-size: 1rem;
-    }
-
-    h1 {
-        text-align: center;
-        font-size: 2rem;
-    }
-
-    main {
-        padding: 1.5rem;
-    }
-
-    #page1 {
-        grid-template-columns: 1fr;
-    }
-
-    #page1 .intro,
-    #page1 .description,
-    #page1 .roles {
-        grid-column: 1;
-    }
-
-    #page1 .roles {
-        grid-template-columns: 1fr;
-    }
-
-
-    header,
-    footer {
-        padding: 1rem;
-    }
-
-=======
-@font-face {
-    font-family: "Cinzel";
-    src: url("fonts/CinzelFont.ttf") format("truetype");
+#page2 .rule-card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(201,157,42,.35);
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Cinzel", Arial, Helvetica, sans-serif;
-
-    /*outline: 1px solid red;*/
+#page2 .comparison{
+    display: grid;
+    gap: 2rem;
 }
 
-body{
-    background-color: #ebe3d5;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+#page2 .safe,
+#page2 .unsafe{
+    background: #687465;
+    border: 3px solid #e8c872;
+    border-radius: 12px;
+    padding: 2rem;
+    color: #f7f1e4;
 }
 
-header{
-    border-bottom: dotted #e8c872;
-    justify-content: space-between;
-}
-nav ul{
-    list-style: none;
-    display: flex;
-    gap: 5rem;
-    padding: 0 10rem;
+/* page2 quiz section*/
+.quiz {
+    padding: 2rem;
+    border: 3px solid #e8c872;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
-nav ul li button{
-    position: relative;
-    background: transparent;
-    border: none;
-    outline: none;
-    cursor: pointer;
-
-    font-size: 1.5rem;
+.quiz h2 {
     color: #443e34;
-    padding: 10px 0;
-    font-weight: 800;
-
-    transition: all 0.5s ease;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    line-height: 1.4;
 }
 
-nav ul li button::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
+.option {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
 
     width: 100%;
-    height: 3px;
-    background-color: #ebe3d5;
+    margin: 1rem 0;
+    padding: 1rem;
 
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: all 0.5s ease;
+    background: #687465;
+    color: white;
+    border-radius: 10px;
+
+    cursor: pointer;
+    transition: 0.25s;
+    box-sizing: border-box;
 }
 
-nav ul li button:hover::after {
-    transform: scaleX(1);
+.option:hover {
+    background: #566152;
+    transform: translateY(-2px);
 }
 
-nav ul li button.active {
-    color: #ebe3d5;
+.option input[type="radio"] {
+    transform: scale(1.3);
+    cursor: pointer;
 }
 
-nav ul li button.active::after {
-    transform: scaleX(1);
-}
-
-main{
+.option span {
     flex: 1;
-    font-size: 2rem;
+    text-align: left;
 }
 
-/*intro page*/
-#page1{
+#submit-button {
+    margin-top: 1.5rem;
+    padding: 0.9rem 2rem;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #e8c872;
+    color: #443e34;
+
+    font-size: 2rem;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+#submit-button:hover:not(:disabled) {
+    background: #d9b75f;
+    transform: translateY(-2px);
+}
+
+#submit-button:disabled {
+    opacity: 0.6;
+    cursor: default;
+}
+
+#result {
+    margin-top: 1.5rem;
+    font-size: 2rem;
+    font-weight: bold;
+    min-height: 2rcap;
+}
+
+/* page 3 benefits page and minigame*/
+#page3{
     padding: 2rem 6rem;
 
-    overflow-wrap: break-word;
-    white-space: normal; 
-
     display: grid;
-    grid-template-columns: 1fr 1fr;
     gap: 3rem;
-
-    color:#443e34;
 }
 
-#page1 .intro{
-    grid-column: 1;
-    grid-row: 1;
-}
-
-#page1 .description{
-    grid-column: 2;
-    grid-row: 1;
-
-    font-weight:500;
-}
-
-#page1 .roles {
-    grid-column: 1/3;
-    grid-row: 2;
-
-    display: grid;
-    grid-template-columns:
-        minmax(0,1fr)
-        minmax(0,1fr)
-        minmax(0,1fr);
-    gap: 2rem;
-}
-
-#page1 .roles h2{
-    grid-column: 1/4;
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-#page1 .intro, .description, .roles{
-    min-width: 0;
-
+#page3 .intro{
     background-color: #f7f1e4;
     padding: 2rem;
     border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0,0,0,.1);
+    text-align: center;
 }
-#page1 .card{
-    min-width: 0;
-    width: 100%;
-    box-sizing: border-box;
+
+#page3 .benefits-grid{
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+    gap: 2rem;
+}
+#page3 .benefit-card{
     background: #687465;
     border: 3px solid #e8c872;
     border-radius: 12px;
-    text-align: center;
-    padding: 6rem 2rem 2rem;
-    position: relative;
-    transition: all 1s ease;
+    padding: 2rem;
+    color: #f7f1e4;
+    transition: all .3s ease;
 }
 
-#page1 .card h2,
-#page1 .card p{
-    overflow-wrap: break-word;
-}
-
-#page1 .card:hover{
+#page3 .benefit-card:hover{
     transform: translateY(-8px);
     box-shadow: 0 10px 25px rgba(201,157,42,.35);
 }
 
+#page3 .benefit-card h3{
+    margin-bottom: 1rem;
+}
+
+#page3 .benefit-card p{
+    line-height: 1.6;
+}
+
+/* minigame */
+
+.order-game{
+    text-align:center;
+    padding:2rem;
+
+    padding: 2rem;
+    border: 3px solid #e8c872;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+#order,
+#items{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:1rem;
+    margin:1rem 0;
+}
+
+.food{
+    padding:1rem;
+    border:2px solid #e8c872;
+    border-radius:10px;
+    cursor:pointer;
+    background:#687465;
+    color:white;
+    font-size:1.5rem;
+    transition:.3s;
+}
+
+.food:hover{
+    transform:translateY(-5px);
+}
+
+.selected{
+    background:#e8c872;
+    color:#443e34;
+}
+
+#minigame-submit {
+    margin-top: 1.5rem;
+    padding: 0.9rem 2rem;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #e8c872;
+    color: #443e34;
+
+    font-size: 2rem;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+#minigame-submit:hover:not(:disabled) {
+    background: #d9b75f;
+    transform: translateY(-2px);
+}
+
+#minigame-submit:disabled {
+    opacity: 0.6;
+    cursor: default;
+}
+
+#minigame-result{
+    font-size: 1.5rem;
+}
+
+/* misc*/
 
 footer{
     border-top: dotted #e8c872;
@@ -401,26 +468,30 @@ header, footer{
     padding: 1rem 5rem;
 }
 
-.page{
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.5s ease;
-    width: 100%;
-    transform: translateY(20px);
-}
-
-.page.active {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-}
 
 .highlight{
     color: #687465;
     font-size: 1.2em;
 }
 
-/*tablet*/
+.golden{
+    color: #f0d959;
+    font-size: 1.2em;
+    text-shadow: 0 1px 20px rgba(0, 0, 0, 0.616);;
+}
+
+/*qr code*/
+.desktop-qr img {
+    width: 180px;
+    height: auto;
+    font-size: 5rem;
+}
+
+.desktop-qr h2{
+    font-size: 3rem;
+}
+
+/*tablet/phone*/
 @media (max-width: 800px) {
     header {
         flex-direction: column;
@@ -438,7 +509,7 @@ header, footer{
     }
 
     nav ul li button {
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
 
     h1 {
@@ -450,25 +521,137 @@ header, footer{
         padding: 1.5rem;
     }
 
+    /*page1*/
     #page1 {
         grid-template-columns: 1fr;
+        padding: 1.5rem;
     }
 
-    #page1 .intro,
-    #page1 .description,
+    #page1 .intro {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    #page1 .description {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
     #page1 .roles {
         grid-column: 1;
+        grid-row: 3;
+    }
+
+    #page1 .roles {
+        grid-template-columns: 1fr;
+    }
+    #page1 .roles h2 {
+        grid-column: 1 / -1;
+        font-size: 1.4rem;
     }
 
     #page1 .roles {
         grid-template-columns: 1fr;
     }
 
+     /*page2*/
+    #page2 {
+        padding: 1.5rem;
+        gap: 1.5rem;
+    }
+
+    #page2 .intro,
+    #page2 .foodsafety,
+    #page2 .rules,
+    #page2 .common-mistakes,
+    #page2 .comparison,
+    #page2 .quiz {
+        margin: 0;
+        padding: 1.5rem;
+    }
+
+    #page2 .foodsafety,
+    #page2 .common-mistakes,
+    #page2 .compare-grid,
+    #page2 .rule-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #page2 img {
+        width: 100%;
+        height: auto;
+    }
+
+    /*page3*/
+    #page3 {
+        padding: 1.5rem;
+        gap: 1.5rem;
+    }
+
+    #page3 .intro {
+        padding: 1.5rem;
+    }
+
+    #page3 .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #page3 .benefit-card {
+        padding: 1.5rem;
+    }
+    /*all pages*/
+
+    #page1,
+    #page2,
+    #page3 {
+        font-size: 1rem;
+    }
+
+    #page1 h2,
+    #page2 h2,
+    #page3 h2 {
+        font-size: 1.6rem;
+    }
+
+    #page1 h3,
+    #page2 h3,
+    #page3 h3 {
+        font-size: 1.3rem;
+    }
+
+    #page1 p,
+    #page2 p,
+    #page3 p,
+    #page1 li,
+    #page2 li,
+    #page3 li,
+    #page1 label,
+    #page2 label,
+    #page3 label,
+    #page1 span,
+    #page2 span,
+    #page3 span {
+        font-size: 0.95rem;
+    }
+
+    #page2 .quiz h2 {
+        font-size: 1.5rem;
+    }
+
+    #submit-button {
+        font-size: 0.9rem;
+    }
+
+    #result {
+        font-size: 1rem;
+    }
 
     header,
     footer {
         padding: 1rem;
     }
 
->>>>>>> 9f2ed82e6577b2baeee92669d9c2362287ba8b40
+    .desktop-qr {
+        display: none;
+    }
 }
