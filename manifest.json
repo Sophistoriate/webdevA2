@@ -10,12 +10,12 @@
   "orientation": "portrait",
   "icons": [
     {
-      "src": "/webdevA2/images/icon-192.png",
+      "src": "/webdevA2/images/small_burger.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/webdevA2/images/icon-512.png",
+      "src": "/webdevA2/images/burger.png",
       "sizes": "512x512",
       "type": "image/png"
     }
