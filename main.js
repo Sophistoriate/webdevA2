@@ -300,57 +300,53 @@ itemsDiv.addEventListener("click", function (event) {
 
     const food = div.textContent;
 
-    if (div.classList.contains("selected")) {
-        div.classList.remove("selected");
+    div.classList.toggle("selected");
 
+    if (div.classList.contains("selected")) {
+        selected.push(food);
+    } else {
         selected = selected.filter(function (item) {
             return item !== food;
         });
     }
-    else {
-        div.classList.add("selected");
-        selected.push(food);
-    }
 });
 
-minigame_submit.onclick=function(){
-
-    if(selected.length!==currentOrder.length){
-        minigame_result.textContent="Wrong number of items!";
-        minigame_result.style.color="#534317";
+minigame_submit.addEventListener("click", function () {
+    if (selected.length !== currentOrder.length) {
+        minigame_result.textContent = "Wrong number of items!";
+        minigame_result.style.color = "#534317";
         return;
     }
 
     const a = selected.slice().sort();
     const b = currentOrder.slice().sort();
 
-    let correct=true;
+    let correct = true;
 
-    for(let i=0;i<a.length;i++){
-        if(a[i]!==b[i]){
-            correct=false;
+    for (let i = 0; i < a.length; i++) {
+        if (a[i] !== b[i]) {
+            correct = false;
             break;
         }
     }
 
-    if(correct){
+    if (correct) {
         score++;
-        minigame_result.textContent="Correct!";
-        minigame_result.style.color="#5bdf6b";
+        minigame_result.textContent = "Correct!";
+        minigame_result.style.color = "#5bdf6b";
         correctSound.play();
-    }
-    else{
-        minigame_result.textContent="Incorrect Order!";
-        minigame_result.style.color="#f06969";
+    } else {
+        minigame_result.textContent = "Incorrect Order!";
+        minigame_result.style.color = "#f06969";
         wrongSound.play();
     }
 
-    scoreText.textContent=score;
+    scoreText.textContent = score;
 
     minigame_submit.disabled = true;
 
-    setTimeout(function(){
+    setTimeout(function () {
         GenerateGame();
         minigame_submit.disabled = false;
     }, 1200);
-};
+});
