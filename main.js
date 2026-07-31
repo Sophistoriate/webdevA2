@@ -287,27 +287,31 @@ function GenerateGame(){
         const div=document.createElement("div");
         div.className="food";
         div.textContent=food;
-
-        div.onclick=function(){
-
-            if(div.classList.contains("selected")){
-                div.classList.remove("selected");
-                selected = selected.filter(function(item) {
-                    return item !== food;
-                });
-            }
-            else{
-                div.classList.add("selected");
-                selected.push(food);
-            }
-
-        };
-
         itemsDiv.appendChild(div);
-
     });
-
 }
+// EVENT DELEGATION
+itemsDiv.addEventListener("click", function (event) {
+    const div = event.target;
+
+    if (!div.classList.contains("food")) {
+        return;
+    }
+
+    const food = div.textContent;
+
+    if (div.classList.contains("selected")) {
+        div.classList.remove("selected");
+
+        selected = selected.filter(function (item) {
+            return item !== food;
+        });
+    }
+    else {
+        div.classList.add("selected");
+        selected.push(food);
+    }
+});
 
 minigame_submit.onclick=function(){
 
