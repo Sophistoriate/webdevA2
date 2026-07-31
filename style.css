@@ -46,9 +46,9 @@ header h1{
 nav ul{
     list-style: none;
     display: flex;
-    gap: 5rem;
-    padding: 0 5%;
-    width: 100%;
+    gap: 2rem;
+    padding: 0;
+    width: auto;
 }
 
 nav ul li button{
@@ -492,7 +492,7 @@ header, footer{
     color: #ebe3d5;
     display: flex;
     align-items: center;
-    padding: 1rem 5rem;
+    padding: 1rem 2rem;
 }
 
 
