@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="manifest" href="manifest.json" />
+        <script src="main.js" defer></script>
+        <title>Fast Food Workers</title>
+    </head>
+    <body>
+        <header>
+            <h1>FAST FOOD WORKERS</h1>
+
+            <nav>
+                <ul>
+                    <li><button id="page1btn">INTRODUCTION & ROLES</button></li>
+                    <li><button id="page2btn">FOOD SAFETY</button></li>
+                    <li><button id="page3btn">BENEFITS & MINIGAME</button></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="page" id="page1">
+                <h2 class="intro">The <span class="highlight">people</span> who make <span class="highlight">fast food</span> happen<span class="highlight">!</span></h2>
+
+                <div class="description">
+                    <p>Fast food workers <span class="highlight">prepare</span> meals, <span class="highlight">serve</span> customers, <span class="highlight">take</span> orders, and <span class="highlight">keep</span> the restaurant clean. They handle different tasks every day to make sure the restaurant runs <span class="highlight">smoothly</span> and customers receive good service.</p>
+                </div>
+
+                <article class="roles">
+                    <h2>Roles as a Fast Food Worker</h2>
+
+                    <div class="card">
+                        <img src="images/cashier.jpg" alt="cashier">
+                        <h2>Cashier Duties</h2>
+                        <p>
+                            Cashiers take customer orders, handle payments, and help customers with their requests. They need to work quickly and accurately while providing friendly service.
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <img src="images/cook.png" alt="cook">
+                        <h2>Kitchen Duties</h2>
+                        <p>
+                            Kitchen workers prepare food by following recipes and safety procedures. They use different cooking equipment to make sure meals are prepared correctly and consistently.
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <img src="images/clean.png" alt="dirty place">
+                        <h2>Cleaning Duties</h2>
+                        <p>
+                            Cleaning is an important part of a fast food worker's job. Workers clean tables, floors, equipment, and preparation areas to maintain a safe and hygienic environment.
+                        </p>
+                    </div>
+                </article>
+            </section>
+
+            <section class="page" id="page2">
+                <h2 class="intro"><span class="highlight">One</span> mistake. <span class="highlight">One</span> bite. <span class="highlight">One</span> consequence. Food safety starts with <span class="highlight">you!</span></h2>
+
+                <article class="foodsafety">
+                    <h2>Why Food Safety <span class="highlight">Matters</span></h2>
+                    <ul>
+                        <li><span class="highlight">Prevents</span> food poisoning</li>
+                        <li><span class="highlight">Stops</span> harmful bacteria</li>
+                        <li><span class="highlight">Protects</span> people's health</li>
+                        <li><span class="highlight">Reduces</span> food waste</li>
+                    </ul>
+                </article>
+
+
+                <article class="rules">
+                    <h2>The 4 <span class="golden">Golden</span> Rules</h2>
+
+                    <div class="rule-grid">
+                        <div class="rule-card">
+                            <h3>Clean</h3>
+                            <p>Wash your hands, utensils, and surfaces before preparing food to prevent bacteria from spreading.</p>
+                        </div>
+
+                        <div class="rule-card">
+                            <h3>Separate</h3>
+                            <p>Keep raw meat away from cooked food to avoid cross-contamination and keep food safe.</p>
+                        </div>
+
+                        <div class="rule-card">
+                            <h3>Cook</h3>
+                            <p>Cook food properly to make sure harmful bacteria are killed before the food is served.</p>
+                        </div>
+
+                        <div class="rule-card">
+                            <h3>Chill</h3>
+                            <p>Store food at the correct temperature to slow bacterial growth and keep food fresh.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="common-mistakes">
+                    <h2>Common Food Safety Mistakes</h2>
+                    <ul>
+                        <li><span class="highlight">Not</span> washing hands before handling food</li>
+                        <li><span class="highlight">Using</span> the same chopping board for different foods</li>
+                        <li><span class="highlight">Leaving</span> food out for too long</li>
+                        <li><span class="highlight">Ignoring</span> expiry dates</li>
+                    </ul>
+                </article>
+
+
+                <article class="comparison">
+                    <h2>Safe vs Unsafe</h2>
+
+                    <div class="compare-grid">
+
+                        <div class="safe">
+                            <h3>Safe</h3>
+                            <ul>
+                                <li>Wash hands before cooking</li>
+                                <li>Cook food properly</li>
+                                <li>Store leftovers safely</li>
+                                <li>Check expiry dates</li>
+                            </ul>
+                        </div>
+
+                        <div class="unsafe">
+                            <h3>Unsafe</h3>
+                            <ul>
+                                <li>Using dirty hands</li>
+                                <li>Serving undercooked meat</li>
+                                <li>Leaving food out overnight</li>
+                                <li>Using expired food</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="quiz">
+                    <h2>Quiz/Trivia Section</h2>
+
+                    <div class="quiz-questions">
+                    </div>
+
+                    <button id="submit-button">SUBMIT</button>
+
+                    <p id="result"></p>
+                </article>
+            </section>
+
+            <section class="page benefits" id="page3">
+            <h2 class="intro"><span class="highlight">Benefits</span> of <span class="highlight">Working</span> in Fast Food Restaurants<span class="highlight">!</span></h2>
+
+            <div class="benefits-grid">
+                <article class="benefit-card">
+                    <h3>Gain Valuable Work Experience</h3>
+                    <p>Fast food jobs help workers develop skills such as teamwork, communication, customer service, and responsibility. These skills can be useful in many different careers.</p>
+                </article>
+
+
+                <article class="benefit-card">
+                    <h3>Improves Communication Skills</h3>
+                    <p>Workers interact with customers and teammates every day, helping them become more confident and improve their communication skills.</p>
+                </article>
+
+
+                <article class="benefit-card">
+                    <h3>Flexible Working Hours</h3>
+                    <p>Many fast food restaurants offer flexible schedules and part-time jobs, making them suitable for students balancing school and work.</p>
+                </article>
+
+
+                <article class="benefit-card">
+                    <h3>Career Growth</h3>
+                    <p>Employees who gain experience and show good performance may have opportunities to become trainers, supervisors, or managers.</p>
+                </article>
+
+
+                <article class="benefit-card">
+                    <h3>Builds Teamwork</h3>
+                    <p>Workers cooperate during busy periods and learn how to solve problems while supporting their teammates.</p>
+                </article>
+
+
+                <article class="benefit-card">
+                    <h3>Employee Benefits</h3>
+                    <p>Many companies provide benefits such as staff meals, discounts, rewards, and training opportunities for employees.</p>
+                </article>
+                </div>
+
+
+                <article class="order-game">
+                    <h2>Order Sorting Game</h2>
+
+                    <h3>Customer Order</h3>
+                    <div id="order"></div>
+
+                    <h3>Available Items</h3>
+                    <div id="items"></div>
+
+                    <button id="minigame-submit">Submit Order</button>
+
+                    <p id="minigame-result"></p>
+                    <p>Score: <span id="score">0</span></p>
+                </article>
+            </section>
+        </main>
+
+        <footer>
+            <div class="desktop-qr">
+                <img src="images/qrcode.png" alt="Website QR Code">
+                <h2>Scan to view this website on your phone.</h2>
+            </div>
+        </footer>
+    </body>
+</html>
