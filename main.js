@@ -189,7 +189,7 @@ submit_button.addEventListener("click", function () {
 
     if (!selected) {
         result.textContent = "Please select an answer.";
-        result.style.color = "#e8c872";
+        result.style.color = "#534317";
         return;
     }
 
@@ -317,6 +317,7 @@ minigame_submit.onclick=function(){
 
     if(selected.length!==currentOrder.length){
         minigame_result.textContent="Wrong number of items!";
+        minigame_result.style.color="#534317";
         return;
     }
 
@@ -335,10 +336,12 @@ minigame_submit.onclick=function(){
     if(correct){
         score++;
         minigame_result.textContent="Correct!";
+        minigame_result.style.color="#5bdf6b";
         correctSound.play();
     }
     else{
         minigame_result.textContent="Incorrect Order!";
+        minigame_result.style.color="#f06969";
         wrongSound.play();
     }
 
